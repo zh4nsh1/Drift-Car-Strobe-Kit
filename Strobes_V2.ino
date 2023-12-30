@@ -57,15 +57,34 @@ void pattern1()
     blink(SEQ1, 50, 50);
     blink(SEQ1, 50, 50);
     
+    //If our switch is no longer on, panic and break.
+    if(!checkInput(TOGGLE))
+    {
+      return;
+    }
+    
     blink(SEQ2, 50, 50);
     blink(SEQ2, 50, 50);
     blink(SEQ2, 50, 50);
     blink(SEQ2, 50, 50);
   }
 
+  //If our switch is no longer on, panic and break.
+    if(!checkInput(TOGGLE))
+    {
+      return;
+    }
+
   flash(50, 100);
   flash(50, 100);
   delay(100);
+
+  //If our switch is no longer on, panic and break.
+    if(!checkInput(TOGGLE))
+    {
+      return;
+    }
+
   flash(50, 100);
   flash(50, 100);
   delay(900);
@@ -74,13 +93,39 @@ void pattern1()
 //Blink alternating
 void pattern2()
 {
+    blink(SEQ1, 50, 50);
+    blink(SEQ1, 50, 50);
+    blink(SEQ1, 50, 50);
+    blink(SEQ1, 50, 50);
 
+    //If our switch is no longer on, panic and break.
+    if(!checkInput(TOGGLE))
+    {
+      return;
+    }
+
+    blink(SEQ2, 50, 50);
+    blink(SEQ2, 50, 50);
+    blink(SEQ2, 50, 50);
+    blink(SEQ2, 50, 50);
 }
 
 //Blink together
 void pattern3()
 {
+  flash(50, 100);
+  flash(50, 100);
+  delay(100);
 
+  //If our switch is no longer on, panic and break.
+    if(!checkInput(TOGGLE))
+    {
+      return;
+    }
+
+  flash(50, 100);
+  flash(50, 100);
+  delay(100);
 }
 
 void flash(int flashduration, int pauseduration)
